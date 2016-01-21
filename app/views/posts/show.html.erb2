@@ -1,0 +1,20 @@
+<p class='lead'>
+  The Post
+  <hr/>
+</p>
+
+<div class='row'>
+  <div class='span8 well'>
+    <h4>
+      <%= @post.title %>
+    </h4>
+    <p>
+      <%= @post.description %>
+    </p>
+    <span class='quiet'>
+      posted by <%= @post.user.username %>
+    </span>
+    
+  </div>
+</div>
+
