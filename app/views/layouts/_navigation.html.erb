@@ -9,13 +9,9 @@
   <%= link_to '#', class: 'btn btn-small dropdown-toggle', 'data-toggle' => 'dropdown' do %>
     Categories
     <ul class="dropdown-menu">
-      <li><a href="https://kkbruce.tw/bs3/Examples/theme#">Action</a></li>
-      <li><a href="https://kkbruce.tw/bs3/Examples/theme#">Another action</a></li>
-      <li><a href="https://kkbruce.tw/bs3/Examples/theme#">Something else here</a></li>
-      <li class="divider"></li>
-      <li class="dropdown-header">Nav header</li>
-      <li><a href="https://kkbruce.tw/bs3/Examples/theme#">Separated link</a></li>
-      <li><a href="https://kkbruce.tw/bs3/Examples/theme#">One more separated link</a></li>
+      <% @categories.each do |category| %>
+        <li><%= link_to category.name, category_path(category) %> </li>
+      <% end %>
     </ul>
   <% end %>
   </div>
