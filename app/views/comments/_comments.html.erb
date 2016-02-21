@@ -1,0 +1,14 @@
+<%= render "shared/content_title", title: "All comments" %>
+
+<% @comments.each do |comment| %>
+  <div class='row'>
+    <div class='span8 well'>
+      <p>
+        <%= comment.body %>
+      </p>
+      <span class='quiet'>
+        commented by <%= comment.user.username %>
+      </span>
+    </div>
+  </div>
+<% end %>
