@@ -7,6 +7,9 @@
   <%= f.text_area :description, rows: 5 %><br/>
   <%= f.label :url, "URL:" %>
   <%= f.text_field :url %><br/>
+  <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |b| %>
+    <%= b.label(class: "check_box inline"){b.check_box(class: "check_box") + b.text} %>
+  <% end %>
   <%= f.text_field :user_id, value: "2" %>
   <%= f.submit 'Submit', class: "btn btn-primary" %>
 <% end %>
